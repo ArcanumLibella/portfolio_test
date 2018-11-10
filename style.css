@@ -2,11 +2,6 @@
   box-sizing: border-box;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 @font-face {
   font-family: "Roboto";
   src: url("fonts/RobotoCondensed-Bold-webfont.woff") format("woff");
@@ -49,14 +44,63 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: "Koho";
+  src: url("fonts/KoHo-Bold.ttf") format("ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Koho";
+  src: url("fonts/KoHo-BoldItalic.ttf") format("ttf");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Koho";
+  src: url("fonts/KoHo-Regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Koho";
+  src: url("fonts/KoHo-Italic.ttf") format("ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Koho";
+  src: url("fonts/KoHo-Light.ttf") format("ttf");
+  font-weight: lighter;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Koho";
+  src: url("fonts/KoHo-LightItalic.ttf") format("ttf");
+  font-weight: lighter;
+  font-style: italic;
+}
+
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Koho', sans-serif;
+  font-weight: lighter;
   text-align: center;
 }
 
+main {
+  background: linear-gradient(#99E06D, white, white, white);
+}
+
 h1 {
+  font-family: 'Koho', sans-serif;
   font-weight: bold;
-  font-size: 2rem;
+  color: rgb(53, 53, 53);
+  font-size: 2.5rem;
   margin-bottom: 30px;
 }
 
@@ -68,6 +112,7 @@ h2 {
 h3 {
   font-weight: bold;
   font-size: 1rem;
+  margin: 10px;
 }
 
 ul {
@@ -78,8 +123,18 @@ p {
   margin-bottom: 30px;
 }
 
+a {
+  color: black;
+  text-decoration: none;
+}
+
+footer {
+  background-color: #99E06D;
+  padding: 30px;
+}
+
 .header {
-  background: #99E06D;
+  background: white;
   height: 100vh;
   padding: 50px;
   display: flex;
@@ -89,17 +144,21 @@ p {
 
 .header_title {
   color: white;
+  font-size: 32px;
+  text-shadow: 2px 2px 0.05px grey;
+  margin: 10px;
 }  
 
 .intro_header {
-  font-size: 1rem;
-  font-style: italic;
+  font-family: 'Koho', sans-serif;
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: rgb(53, 53, 53);
   margin-bottom: 20px;
 }
 
 .presentation {
-  background: #C7EEB0;
-  height: 100vh;
+  height: 50vh;
   padding: 50px;
   display: flex;
   justify-content: center;
@@ -109,32 +168,102 @@ p {
 .presentation p {
   max-width: 800px;
   margin: 0 auto;
+  font-family: 'Koho', sans-serif;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  color: white;
 }
 
 .container_skills {
-  
+  display: flex;
+  justify-content: center;
+  margin: 0px 50px;
 }
 
 .skills {
-  background-color: #ECF5E6;
+  background-color: white;
   border-radius: 20px;
-  border: solid 1px grey; 
-  margin: 0 30px;
+  border: solid 0.5px rgb(210, 210, 210); 
 }
 
 .skill {
-  border-bottom: solid 1px grey;
-  padding: 20px;
+  border-bottom: solid 0.5px rgb(210, 210, 210);
+  margin: 25px 0px 25px 0px;
+  padding: 0px 20px;
+  flex-grow: 1;
 }
 
 .skill:last-child {
   border-bottom: none;
 }
-.title_skill {
+
+.icon_skill {
+  margin: 15px;
+}
+
+.skill_title {
   font-weight: bold;
   font-size: 1.5rem;
   color: #72C841; 
+  margin-bottom: 10px;
 }
 
+.works {
+  padding: 50px 10px 1000px 10px;
+}
+
+.title_work {
+  padding: 10px;
+}
+.social {
+  background-color: #99E06D;
+  color: #fff;
+  border-radius: 100%;
+  margin: 0 .2rem;
+  height: 47px;
+  width: 47px;
+  cursor: pointer;
+}
+
+.social_icon {
+  background-color: transparent;
+  padding: 10px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.3);
+}
+
+.social_icon:hover {
+  background-color: white;
+  transition: 500ms;
+}
+
+.copyright {
+  font-weight: bold;
+  color: white;
+  padding-top: 30px;
+}
+
+@media (min-width: 1150px) {
+  .skills {
+    width: 1200px;
+    display: inline-flex;
+  }
+
+  .skill:nth-child(3) {
+    border-right: none;
+  }
+
+  .skill {
+    border-right: solid 1px rgb(210, 210, 210);
+    border-bottom: none;
+    margin: 0px;
+    padding: 20px 25px;
+  }
+}
 
 
